@@ -2,38 +2,49 @@
 
 .SH NAME
 
-d2r_DataValid
+d2r_DataValid \- validates data
 
 .SH SYNOPSIS
 
-d2r_DataValid \- 
+d2r_DataValid  [ options ] [ args ]
 
 .SH DESCRIPTION
 
-Validates data sent from either a generator or actual output from a temperature sensor. Data is validated in several different aspects. The temperature is checked to make sure it outputs a temperature between -50 C and 80 C as that is the minimum and maximum temperature allowed by the sensor, though for practical reasons those temperatures may be reduced to a more reasonable gauge seeing as how the circuit measures room temperatures. The humidity should also be a number between 1-100.The time is also checked to make sure it comes after the previous recorded time but no more than 2 or 3 seconds after. Any variance in these conditions will lead to removal of the data from the structure as a whole.
+Validates data sent from either a generator or actual output from a
+temperature sensor. Data is validated in several different aspects. The
+temperature is checked to make sure it outputs a temperature between
+-50 C and 80 C as that is the minimum and maximum temperature allowed
+by the sensor, though for practical reasons those temperatures may be
+reduced to a more reasonable gauge seeing as how the circuit measures room
+temperatures. The humidity should also be a number between 1-100.The time
+is also checked to make sure it comes after the previous recorded time
+but no more than 2 or 3 seconds after. Any variance in these conditions
+will lead to removal of the data from the structure as a whole.
 
--SW See also d2r_DataGen
+-SH See Also
+
+d2r_DataGen for data format.
+
 
 .SH OPTIONS
 
-- t Minimum Temperature
+-t n	Minimum Temperature  (defaults to -50C)
 
-- T Maximum Temperature
+-T n	Maximum Temperature  (defaults to 80C)
 
-- h Minimum Humidity
+-h n	Minimum Humidity (defaults to 1)
 
-- H Maximum Humidity
+-H n	Maximum Humidity (defaults to 100)
 
-- i Minimum Time Interval
+-i n	Minimum Time Interval (defaults to 2)
 
-- I Maximum Time Interval
+-I n	Maximum Time Interval (defaults to 3)
 
-- s Strict Checking
+-s 	Strict Checking, any deviation is fatal error
 
--f Fix
+-f	Fix simple errors
 
--q Silent
+-q	Silent -- only emit status code.  0 for OK, no-zero otherwise.
 
 .SH TODO
 
-Figure out reasonable temperature and humidity limits, along with proper timing restrictions. 
