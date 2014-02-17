@@ -1,0 +1,129 @@
+
+Ryan Malley, Independent Study
+
+14rem@suffieldacademy.org
+jhealy@suffieldacademy.org
+vscott@suffieldacademy.org 413-386-9200
+vagnscott@gmail.com
+
+Plan of the Work
+
+GOAL: Gather temperature data and transmit it over a network to be
+      stored on a server for display and analysis.
+
+RESOURCES:
+
+    hardware
+
+	dht22	temperature and humidity sensor
+			vendor:
+			datasheet:
+
+	rpi	raspberry pi
+			homepage:
+
+	misc	keyboard, mouse, monitor
+			generic components on hand
+
+    software
+
+	debian/arm	OS for rpi
+	libdht22	originally for arduino
+	python		scripting language for rpi
+	d2r		dht22 to rpi scripts
+
+    infrastructure
+
+	LAN		wired lan for rpi network interface
+	host		mac or linux host with python
+
+
+PROJECT ROADMAP:
+
+	read temp
+	feed data to rpi
+	upload data through network
+	store data offsite
+
+PROJECT SCHEDULE:
+	
+1. acquire hardware (DONE)
+
+2. learn to read data from dht22 (DONE)
+
+2.5
+
+	man pages
+	data formats on the wire
+		html GET or PUT
+		RESTful interface
+		protocol buffers
+		json/xml/ec
+		SQL to a DB (mysql or postgresql)
+	data formats in memory
+		just work with the string
+		parse to a structure
+	data formats on disk
+
+3. define software  (week of feb 10)
+
+	- service name d2r
+	- locations of files and directories
+	- data formats
+		- in files
+		- in memory
+		- on the wire
+	- keep reference list
+
+    deliverables
+	- printout of reference list
+	- source to man page for the executables
+		can be combined if two pager
+	- source to man page for the data formats
+	- printouts of all man pages
+		http://lifehacker.com/5983680/how-the-heck-do-i-use-github
+	- comments, questions, in log book
+
+4. create testing framework (week of Feb 17)
+
+	- write and document example file formats
+	- scripted data generators, parsers, validators
+
+    deliverables
+	- project binder
+	- project folder
+	- project archive
+	- source to man pages for all programs
+	- source to man pages for all formats
+	- printouts of all man pages
+	- comments, questions, in log book
+	- printout of new reference list entries
+
+5. data acquisition code (week of feb 24)
+	- schematic, bom, layout (with picture)
+	- spec
+	- code
+	- validate
+
+6. data transmission code (week of apr 7)
+	- spec
+	- code
+	- validate
+
+7. data storage code (week of apr 14)
+	- spec
+	- code
+	- validate
+
+8. data display code (week of apr 21)
+	- spec
+	- code
+	- validate
+
+9. system integration (week of may 4)
+	- validation     "Are you building the right thing?"
+	- verification	 "Are you building it right?"
+	- acceptance
+
+10. project report & webpage (week of may 11)
+

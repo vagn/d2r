@@ -1,0 +1,31 @@
+.TH d2r_DataGen Ryan today source manual
+
+.SH NAME
+
+d2r_DataGen
+
+.SH SYNOPSIS
+
+d2r_DataGen \- Generates a sequenced stream of data in the format
+
+.SH DESCRIPTION
+
+some description
+
+.SH DATA STRUCTURE
+
+.nf
+Temperature : 6#,
+Humidity : 5#,
+Time 1/1/# 11:1x
+.fi
+
+# represents a number in the sequence 1-9.
+There is a two second time delay between each transmission.
+This is meant to mimic the data transmission that a
+micro controller sends across a network after receiving data from a DHT22 sensor. 
+
+.SH TODO
+
+Hopefully add an optional seed parameter that can change the output to
+some random degree.
